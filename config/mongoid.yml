@@ -9,7 +9,7 @@ development:
       # Provides the hosts the default session can connect to. Must be an array
       # of host:port pairs. (required)
       hosts:
-        - localhost:27017
+        - mongodb://bharath:bharath1234@ds131099.mlab.com:31099/heroku_pq9dhklv
       options:
         # Change whether the session persists in safe mode by default.
         # (default: false)
