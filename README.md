@@ -14,7 +14,7 @@ From the project path run the following commands
 gem install bundler
 bundle install
 rake db:mongoid:create_indexes # runs indexes defined in models
-rake db:mongoid:create_indexes # Background job to populate tweets with location information
+rake twitter:record_tweets # Background job to populate tweets with location information
 rails s
 ```
 Once the above commands succeed, you can run the application on the browser http://localhost:3000/tweets
