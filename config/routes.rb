@@ -1,5 +1,9 @@
 TweetsLocator::Application.routes.draw do
-  resources :tweets
+  resources :tweets do
+    collection do
+      get 'search'
+    end
+  end
 
 
   # The priority is based upon order of creation:
