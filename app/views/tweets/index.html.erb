@@ -4,18 +4,14 @@
   <tr>
     <th>Tweet</th>
     <th>Location</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Hash Tags</th>
   </tr>
 
 <% @tweets.each do |tweet| %>
   <tr>
-    <td><%= tweet.tweet %></td>
+    <td><%= link_to tweet.tweet, tweet %></td>
     <td><%= tweet.location %></td>
-    <td><%= link_to 'Show', tweet %></td>
-    <td><%= link_to 'Edit', edit_tweet_path(tweet) %></td>
-    <td><%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= tweet.hashtags.blank? ? "N/A" : tweet.hashtags.collect { |ht| "#" + ht['text'] }.join(", ") %></td>
   </tr>
 <% end %>
 </table>

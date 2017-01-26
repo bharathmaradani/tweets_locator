@@ -9,6 +9,10 @@ gem "mongoid"
 
 gem 'mongoid-geospatial', require: 'mongoid/geospatial'
 
+gem 'tweetstream'
+
+gem 'rest-client'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
